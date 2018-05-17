@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>CamBot</title>
+<script type="text/javascript"
+src="/webiopi. js"></script>
+<script type="text/javascript">
+	function init() {
+		var button; 
+		button =webiopi(). createButton("bt_up","/\", go_forward,stop);
+		$("#box"). append(button);
+		
+		button = webiopi().createButton("bt_left", "<", turn_left, stop);
+        $("#middle").append(button);
+        
+        button = webiopi().createButton("bt_stop", "X", stop);
+        $("#middle").append(button);
+        
+        button = webiopi().createButton("bt_right", ">", turn_right, stop);
+        $("#middle").append(button);
+        
+        button = webiopi().createButton("bt_down", "\/", go_backward, stop);
+        $("#down").append(button);
+    }
+	
+	}function go_forward() {
+		webiopi().callMacro("go_forward");
+	}
+	function stop() {
+		webiopi(). callMacro("stop");
+	}
+	function turn_right() {
+        webiopi().callMacro("turn_right");
+    }
+        
+    function turn_left() {
+        webiopi().callMacro("turn_left");
+    }
+	function go_backward() {
+        webiopi().callMacro("go_backward");
+    }
+	webiopi(). ready(init);
+</script>
+</head>
+<body>
+<div id=”box" align="center">
+</div>
+<img src="http: //raspberrypi: 8001/?action=stream">
+</body>
+</html>
