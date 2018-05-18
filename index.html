@@ -1,8 +1,7 @@
 <html>
 <head>
 <title>CamBot</title>
-<script type="text/javascript"
-src="/webiopi. js"></script>
+<script type="text/javascript" src="/webiopi. js"></script>
 <script type="text/javascript">
 	function init() {
 		var button; 
@@ -10,17 +9,17 @@ src="/webiopi. js"></script>
 		$("#box"). append(button);
 		
 		button = webiopi().createButton("bt_left", "<", turn_left, stop);
-        $("#middle").append(button);
+        	$("#middle").append(button);
         
-        button = webiopi().createButton("bt_stop", "X", stop);
-        $("#middle").append(button);
+        	button = webiopi().createButton("bt_stop", "X", stop);
+       		$("#middle").append(button);
         
-        button = webiopi().createButton("bt_right", ">", turn_right, stop);
-        $("#middle").append(button);
+        	button = webiopi().createButton("bt_right", ">", turn_right, stop);
+        	$("#middle").append(button);
         
-        button = webiopi().createButton("bt_down", "\/", go_backward, stop);
-        $("#down").append(button);
-    }
+        	button = webiopi().createButton("bt_down", "\/", go_backward, stop);
+        	$("#down").append(button);
+    	}
 	
 	}function go_forward() {
 		webiopi().callMacro("go_forward");
