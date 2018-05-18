@@ -5,20 +5,20 @@
 <script type="text/javascript">
 	function init() {
 		var button; 
-		button =webiopi(). createButton("bt_up","/\",go_forward,stop);
-		$("#box").append(button);
-		
-		button = webiopi().createButton("bt_left", "<",turn_left, stop);
+		button = webiopi().createButton("bt_up", "/\\",go_forward, stop);
+        	$("#up").append(button);
+        
+        	button = webiopi().createButton("bt_left", "<",turn_left, stop);
         	$("#middle").append(button);
         
-        	button = webiopi().createButton("bt_stop", "X",stop);
-       		$("#middle").append(button);
-        
-        	button = webiopi().createButton("bt_right", ">",turn_right,stop);
+        	button = webiopi().createButton("bt_stop", "X", stop);
         	$("#middle").append(button);
         
-        	button = webiopi().createButton("bt_down", "\/",go_backward,stop);
-        	$("#down").append(button);
+        	button = webiopi().createButton("bt_right", ">",turn_right, stop);
+        	$("#middle").append(button);
+        
+        	button = webiopi().createButton("bt_down", "\\/",go_backward, stop);
+       		$("#down").append(button);
     	}
 	
 	}function go_forward() {
@@ -37,12 +37,12 @@
 	function go_backward() {
         	webiopi().callMacro("go_backward");
     	}
-	webiopi(). ready(init);
+	webiopi().ready(init);
 </script>
 </head>
 <body>
-<div id=”box" align="center">
-</div>
-<img src="http://raspberrypi: 8001/?action=stream">
+	<div id=”box" align="center">
+	</div>
+	<img src="http://raspberrypi: 8001/?action=stream">
 </body>
 </html>
